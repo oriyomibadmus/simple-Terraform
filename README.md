@@ -3,7 +3,7 @@
 
 Here, Jenkins is used to continuously pull changes made by developers on the source code (Terraform file). The updated file while includes desired changes needed to be implemented in the AWS environment is then used to initiate and apply the changes. In this case, terraform is used to
 
-1. Creates a VPC (Virtual Private Network)
+1. Creates a VPC
 2. Creates an Internet Gateway
 3. Creates a Custom Route Table
 4. Creates a Subnet
