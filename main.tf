@@ -1,8 +1,6 @@
 # Provider Block
 provider "aws" {
   region = var.webserver_region
- #access_key = var.webserver_access_key
-  #secret_key = var.webserver_secret_key
 }
 
  # Create vpc
