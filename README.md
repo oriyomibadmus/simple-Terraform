@@ -1,9 +1,26 @@
 # Simple Jenkins-Terraform Integration
+## Description
 
-This project demonstrates a GitHub - Jenkins - Terraform workflow.
+Here, Jenkins is used to continuously pull changes made by developers on the source code (Terraform file). The updated file while includes desired changes needed to be implemented in the AWS environment is then used to initiate and apply the changes. In this case, terraform is used to
+
+1. Creates a VPC (Virtual Private Network)
+2. Creates an Internet Gateway
+3. Creates a Custom Route Table
+4. Creates a Subnet
+5. Associates the Subnet with the Route Table
+6. Creates a Security Group to allow port 22, 80, 44
+7. Creates a Network Interface with an IP in the subnet that was created in step 4
+8. Assigns an Elastic IP to the network interface created in step 7
+9. Create an Ubuntu Server and install apache2 (then enable the apache2 service)
+
+Note: This is a completed automated setup.
+
 
 <img src="readmeImages/terraformProject.png">
 
+## Technologies
+
+- Git, Jenkins, Terraform, AWS Service, and Apache
 
 ## Requirements
 1. CloudBees Aws Credential Plugin
@@ -28,19 +45,7 @@ withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariab
 ```
 
 
-## Terraform File
 
-The terraform file executes the set up below:
-
-1. Creates a VPC (Virtual Private Network)
-2. Creates an Internet Gateway
-3. Creates a Custom Route Table
-4. Creates a Subnet
-5. Associates the Subnet with the Route Table
-6. Creates a Security Group to allow port 22, 80, 44
-7. Creates a Network Interface with an IP in the subnet that was created in step 4
-8. Assigns an Elastic IP to the network interface created in step 7
-9. Create an Ubuntu Server and install apache2 (then enable the apache2 service)
 
 ## Completion
 
